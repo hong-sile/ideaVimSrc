@@ -1,0 +1,96 @@
+"ideavimrc 기본 설정 23/05/19
+" 기본 설정
+let mapleader=" "
+nnoremap <leader>reg :register<CR>
+
+" 인텔리제이 설정
+""" MOVE
+nnoremap <leader>gc :action GotoClass<CR>
+nnoremap <leader>gi :action GotoImplementation<CR>
+nnoremap <leader>gd :action GotoDeclaration<CR>
+nnoremap <leader>gp :action GotoSuperMethod<CR>
+nnoremap <leader>gt :action GotoTest<CR>
+nnoremap <leader>gb :action Back<CR>
+nnoremap <leader>gf :action Forward<CR>
+nnoremap <leader>ca :action CloseAllEditorsButActive<CR>
+
+""" RUN & DEBUG
+nnoremap <leader>bb :action ToggleLineBreakpoint<CR>
+nnoremap <leader>cc :action Run<CR>
+nnoremap <leader>cr :action RunClass<CR>
+nnoremap <leader>dd :action Debug<CR>
+nnoremap <leader>ce :action RunCoverage<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+nnoremap <leader>rp :action IntroduceParameter<CR>
+nnoremap <leader>rc :action IntroduceConstant<CR>
+nnoremap <leader>ri :action Inline<CR>
+nnoremap <leader>ii :action ImplementationMethods<CR>
+
+""" WINDOW
+nnoremap <leader>w <C-w>
+nnoremap <leader>sp :sp<CR>
+nnoremap <leader>vp :vsp<CR>
+
+""" SHELL
+nnoremap <leader>ss :shell<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+"" Plugins
+""" vim-surroun
+set surround
+
+""" vim-nerdtree
+Plug 'preservim/nerdtree'
+nmap <leader>n :NERDTree<cr>
+
+"""vim-commentary
+set commentary
+
+""" vim-multiple-cursors
+set multiple-cursors
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
+nnoremap <leader>p :NERDTree<cr>
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+set nu rnu
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+set hlsearch
+set smartcase
+set nu
+set autoindent
+set scrolloff=3
+set wildmode=longest,list
+set ts=4
+set sts=4
+set sw=1
+set autowrite
+set autoread
+set cindent
+set bs=eol,start,indent
+set history=256
+set laststatus=2
+set shiftwidth=4
+set showmatch
+set smarttab
+set smartindent
+set softtabstop=4
+set tabstop=4
+set ruler
+set incsearch
+set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
+set nocompatible
+set clipboard=unnamed
+set sneak
