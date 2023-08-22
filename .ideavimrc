@@ -32,6 +32,7 @@ nnoremap <leader>ii :action ImplementationMethods<CR>
 nnoremap <leader>w <C-w>
 nnoremap <leader>sp :sp<CR>
 nnoremap <leader>vp :vsp<CR>
+nnoremap <leader>rw :action ActivateRunToolWindow<CR>
 
 """ SHELL
 nnoremap <leader>ss :shell<CR>
@@ -47,6 +48,10 @@ nmap <leader>n :NERDTree<cr>
 
 """vim-commentary
 set commentary
+
+""" vim-easymotion
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
 
 """ vim-multiple-cursors
 set multiple-cursors
