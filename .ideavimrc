@@ -1,4 +1,5 @@
-"ideavimrc 기본 설정 '24/01/04
+"ideavimrc 기본 설정 '24/01/28
+"맥전용으로 커스텀
 " 기본 설정
 let mapleader=" "
 nnoremap <leader>reg :register<CR>
@@ -72,8 +73,8 @@ set nu rnu
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
 
-map <C-j> 10j
-map <C-k> 10k
+map <D-j> 10j
+map <D-k> 10k
 
 " Find more examples here: https://jb.gg/share-ideavimrc
 
@@ -104,3 +105,6 @@ set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
 set nocompatible
 set clipboard=unnamed
 set sneak
+
+"" vimrc 설정 불러오기
+source ~/.vimrc
