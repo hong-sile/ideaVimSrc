@@ -53,8 +53,8 @@ set commentary
 """ vim-easymotion
 set easymotion
 
-map <leader>f <Plug>(easymotion-s)
-map <leader>e <Plug>(easymotion-f)
+map <leader>f <Plug>(easymotion-f)
+map <leader><S-f> <Plug>(easymotion-s)
 
 """ vim-multiple-cursors
 set multiple-cursors
