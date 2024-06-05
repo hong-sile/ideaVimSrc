@@ -19,18 +19,33 @@ escape_keyevent = hs.eventtap.new (
 )
 escape_keyevent:start()
 
-
 function stroke_arrow(arrow_key)
   local event = require("hs.eventtap").event
   event.newKeyEvent({}, arrow_key, true):post()
   event.newKeyEvent({}, arrow_key, false):post()
 end
 
-hs.hotkey.bind({"command"}, "H",
+hs.hotkey.bind({"ctrl"}, "H",
   function () stroke_arrow('left') end,
   function () end,
   function () stroke_arrow('left') end
 )
+hs.hotkey.bind({"ctrl"}, "J",
+  function () stroke_arrow('down') end,
+  function () end,
+  function () stroke_arrow('down') end
+)
+hs.hotkey.bind({"ctrl"}, "K",
+  function () stroke_arrow('up') end,
+  function () end,
+  function () stroke_arrow('up') end
+)
+hs.hotkey.bind({"ctrl"}, "L",
+  function () stroke_arrow('right') end,
+  function () end,
+  function () stroke_arrow('right') end
+)
+
 hs.hotkey.bind({"command"}, "J",
   function () stroke_arrow('down') end,
   function () end,
@@ -40,9 +55,4 @@ hs.hotkey.bind({"command"}, "K",
   function () stroke_arrow('up') end,
   function () end,
   function () stroke_arrow('up') end
-)
-hs.hotkey.bind({"command"}, "L",
-  function () stroke_arrow('right') end,
-  function () end,
-  function () stroke_arrow('right') end
 )
