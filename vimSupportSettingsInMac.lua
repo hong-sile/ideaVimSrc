@@ -46,13 +46,23 @@ hs.hotkey.bind({"ctrl"}, "L",
   function () stroke_arrow('right') end
 )
 
-hs.hotkey.bind({"command"}, "J",
+hs.hotkey.bind({"option"}, "H",
+  function () stroke_arrow('left') end,
+  function () end,
+  function () stroke_arrow('left') end
+)
+hs.hotkey.bind({"option"}, "J",
   function () stroke_arrow('down') end,
   function () end,
   function () stroke_arrow('down') end
 )
-hs.hotkey.bind({"command"}, "K",
+hs.hotkey.bind({"option"}, "K",
   function () stroke_arrow('up') end,
   function () end,
   function () stroke_arrow('up') end
+)
+hs.hotkey.bind({"option"}, "L",
+  function () stroke_arrow('right') end,
+  function () end,
+  function () stroke_arrow('right') end
 )
